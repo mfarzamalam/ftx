@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+	height: 50px;
+}
+
+.text-green {
+	color: #59b200 !important;
+
+}
+
+.bg-gray {
+	background: #333333;
+}
+
+.bg-green {
+	background: #59b200;
+}
+
+.text-black {
+	color: #000000 !important;
+}
+
+.border-radius {
+	border-radius: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+	transition: 0.5s;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #59b200;
+	transition: 0.5s;
+}
+
+.min-h-100 {
+	min-height: 100vh;
+}
+
+.min-h-70 {
+	min-height: 70vh;
+}
+
+.active {
+	font-weight: bold;
+	color: #59b200 !important;
+}
+
+
+.r-card-outer {
+	border: 4px solid #59b200;
+	border-top: none;
+	border-bottom: none;
+	border-radius: 20px;
+}
+
+.r-card-outer-pri {
+	border: 4px solid #ffffff;
+	border-top: none;
+	border-bottom: none;
+	border-radius: 20px;
+}
+
+
+.accordion-button:focus {
+	z-index: 3;
+	border-color: #59b200 !important;
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgb(89 178 0 / 25%);
+}
+
+
+.accordion-button:not(.collapsed) {
+	color: #ffffff;
+	background-color: #333333;
+	box-shadow: inset 0 -1px 0 rgb(89 178 0/ 13%);
+}
+
+.accordion-body {
+	border: 2px solid #59b200;
+}
+
+
+/*faq-contact*/
+.desktop-faq ul li {
+	list-style: none;
+}
+
+.desktop-faq ul li a {
+	text-decoration: none;
+	color: #59b200 !important;
+	border-bottom: 4px solid #ffffff !important;
+}
+
+.desktop-faq ul li a:hover {
+	border-bottom: 4px solid #59b200 !important;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.desktop-faq ul li a.active {
+	border-bottom: 4px solid #59b200 !important;
+	transition: 0.5s;
+}
+
+@media (min-device-width: 767px) {
+	#faq-contact-us {
+		height: calc(100vh - 50px);
+		padding: 54px;
+		margin-bottom: 30px;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 20px;
+		border-radius: 20px;
+	}
+
+	#faq-for-sm {
+		display: none !important;
+	}
+
+	.desktop-faq {
+		display: block !important;
+	}
+}
+
+@media (min-device-width: 280px) and (max-device-width: 766px) {
+	.desktop-faq {
+		display: none !important;
+	}
+
+	#faq-for-sm {
+		outline: block !important;
+	}
+
+	#faq-for-sm ul li {
+		list-style: none;
+	}
+
+	#faq-for-sm ul li a {
+		list-style: none;
+		text-decoration: none;
+		color: #59b200 !important;
+	}
+}
+
+/*faq-contact ends*/
