@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mainContent %}
+
+
+      <!-- landing area -->
+      <section style="margin-top: 77px;">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12 col-md-4 min-h-100 d-flex align-items-center justify-content-center" style="background: #f1f1f1;">
+                  <div class="col-12">
+                     <img src="{% static 'imgs/logo.png' %}" alt="logo" class="img-fluid">
+                  </div>
+               </div>
+               <div class="col-12 col-md-8 min-h-100 justify-content-center d-flex align-items-center bg-gray">
+                  <div class="px-4">
+                     <h1 class="fw-bold text-green">
+                        Email
+                     </h1>
+                     <h3  class="fw-bold text-white">
+                        Contact@ftxexpress.com
+                     </h3>
+                     <h1 class="fw-bold text-green">
+                        Opening hours
+                     </h1>
+                     <h3  class="fw-bold text-white mb-4">
+                        Monday – Thursday <span class="text-green">9:00 – 17:30</span> <br />
+                        Fridays <span class="text-green">9:00 – 17:00</span>. <br />
+                        The office is <span class="text-green">closed</span> at weekends and bank holidays.
+                     </h3>
+                     <h3 class="text-green fw-bold">
+                        PLEASE NOTE
+                     </h3>
+                     <p class="text-white fw-bold">
+                        The <span class="text-green">information you provide to us</span> when you contact us will be used in accordance with our <span class="text-green">Privacy Policy</span>. By providing your information, you consent to us contacting you by electronic means, for example email or SMS – <span class="text-green">if you do not want us to use your information</span> in this way, please contact us.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+{% endblock mainContent %}

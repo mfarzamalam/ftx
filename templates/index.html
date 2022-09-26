@@ -1,266 +1,215 @@
-<!doctype html>
-<html lang="en">
-   <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="styles.css">
-      <title>Ftx Express</title>
-   </head>
-   <body>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
-         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt="FTX logo" class="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="about-us.html">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="services.html">Services</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="accounts.html">Accounts</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="contact-us.html">Contact Us</a>
-                  </li>
-                  </li>
-               </ul>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mainContent %}
+
+<section class="min-h-100 d-flex align-items-center bg-gray" style="margin-top: 77px;">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-12 col-md-6">
+            <div class="p-3">
+               <h3 class="text-green mb-3">
+                  We’re a 
+                  <span class="text-white fw-bold">
+                     <h2>Australian based escrow company</h2>
+                  </span>
+                  helping businesses and individuals exchange assets and funds.
+               </h3>
+               <h4 class="text-white fw-bold">
+                  What is Escrow?
+               </h4>
+               <p class="text-green fw-bold mb-3">
+                  Escrow is the term used when a contractual arrangement between two or more parties is put in place, in which an Escrow <span class="text-white">Company will hold funds or property during a transaction,</span> acting as an independent third party.
+               </p>
+               <p class="text-white fw-bold mb-3">
+                  When providing Escrow Services the <span class="text-green">Escrow Company acts as</span> a third party to the transaction by holding the funds or property <span class="text-green">until pre-agreed conditions have been met.</span> Once the conditions are met the Escrow Service provider will release the funds/ property held..
+               </p>
+               <h4 class="text-green fw-bold">
+                  Escrow Services can be <span class="text-white">used</span> in almost any situation where <span class="text-white">money or property is being transferred</span> between parties.
+               </h4>
             </div>
          </div>
-      </nav>
-      <!-- content start -->
-      <!-- landing area -->
-      <section class="min-h-100 d-flex align-items-center bg-gray" style="margin-top: 77px;">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-12 col-md-6">
-                  <div class="p-3">
-                     <h3 class="text-green mb-3">
-                        We’re a 
-                        <span class="text-white fw-bold">
-                           <h2>Australian based escrow company</h2>
-                        </span>
-                        helping businesses and individuals exchange assets and funds.
-                     </h3>
-                     <h4 class="text-white fw-bold">
-                        What is Escrow?
-                     </h4>
-                     <p class="text-green fw-bold mb-3">
-                        Escrow is the term used when a contractual arrangement between two or more parties is put in place, in which an Escrow <span class="text-white">Company will hold funds or property during a transaction,</span> acting as an independent third party.
-                     </p>
-                     <p class="text-white fw-bold mb-3">
-                        When providing Escrow Services the <span class="text-green">Escrow Company acts as</span> a third party to the transaction by holding the funds or property <span class="text-green">until pre-agreed conditions have been met.</span> Once the conditions are met the Escrow Service provider will release the funds/ property held..
-                     </p>
-                     <h4 class="text-green fw-bold">
-                        Escrow Services can be <span class="text-white">used</span> in almost any situation where <span class="text-white">money or property is being transferred</span> between parties.
-                     </h4>
+         <div class="col-12 col-md-6 py-3">
+            <img src="{% static 'imgs/header-img.jpg' %}" class="img-fluid " style=" object-fit: cover;
+               border-radius: 20px;
+               height: 100%;
+               width: auto;
+               background-size: cover;" alt="">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section id="question-area" class="py-5 bg-green min-h-70 d-flex align-items-center">
+   <div class="container">
+      <div class="row d-flex justify-content-center">
+         <h1 class="fw-bold text-center mt-5 mt-md-0 mb-5">
+            Questions?
+         </h1>
+         <div class="col-12 col-md-9">
+            <div class="accordion accordion-flush " id="accordionFlushExample">
+               <div class="accordion-item border-0  my-2">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                     <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <p class="fw-bold m-0">
+                           What is it used for?
+                        </p>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                        <p class="accordian-text-dark">
+                           Escrow can be used in relation to virtually any matter involving the transfer of money or property.
+                           Examples include:
+                        <ul>
+                           <li>
+                              Corporate financing and the raising of capital
+                           </li>
+                           <li>
+                              Corporate transactions including mergers, acquisitions and sales
+                           </li>
+                           <li>
+                              Charity and fundraising events
+                           </li>
+                           <li>
+                              Loans where release of the loan money is conditional on a future event or is to be paid in instalments
+                           </li>
+                           <li>
+                              Real estate and other property related transactions
+                           </li>
+                           <li>
+                              Sales of high value property at a distance (eg cars, antiques and wine)
+                           </li>
+                           <li>
+                              The holding of settlement funds following disputes
+                              Please see our <a href="services.html" class="text-green fw-bold">services page</a>, for the types of service and sectors we work with.
+                           </li>
+                        </ul>
+                        </p>
+                     </div>
                   </div>
                </div>
-               <div class="col-12 col-md-6 py-3">
-                  <img src="imgs/header-img.jpg" class="img-fluid " style=" object-fit: cover;
-                     border-radius: 20px;
-                     height: 100%;
-                     width: auto;
-                     background-size: cover;" alt="">
-               </div>
-            </div>
-         </div>
-      </section>
-      <section id="question-area" class="py-5 bg-green min-h-70 d-flex align-items-center">
-         <div class="container">
-            <div class="row d-flex justify-content-center">
-               <h1 class="fw-bold text-center mt-5 mt-md-0 mb-5">
-                  Questions?
-               </h1>
-               <div class="col-12 col-md-9">
-                  <div class="accordion accordion-flush " id="accordionFlushExample">
-                     <div class="accordion-item border-0  my-2">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                           <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              <p class="fw-bold m-0">
-                                 What is it used for?
-                              </p>
-                           </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                           <div class="accordion-body">
-                              <p class="accordian-text-dark">
-                                 Escrow can be used in relation to virtually any matter involving the transfer of money or property.
-                                 Examples include:
-                              <ul>
-                                 <li>
-                                    Corporate financing and the raising of capital
-                                 </li>
-                                 <li>
-                                    Corporate transactions including mergers, acquisitions and sales
-                                 </li>
-                                 <li>
-                                    Charity and fundraising events
-                                 </li>
-                                 <li>
-                                    Loans where release of the loan money is conditional on a future event or is to be paid in instalments
-                                 </li>
-                                 <li>
-                                    Real estate and other property related transactions
-                                 </li>
-                                 <li>
-                                    Sales of high value property at a distance (eg cars, antiques and wine)
-                                 </li>
-                                 <li>
-                                    The holding of settlement funds following disputes
-                                    Please see our <a href="services.html" class="text-green fw-bold">services page</a>, for the types of service and sectors we work with.
-                                 </li>
-                              </ul>
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="accordion-item border-0 my-2">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              <p class="fw-bold m-0">
-                                 What are the benefits of using Escrow?
-                              </p>
-                           </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                           <div class="accordion-body">
-                              <p class="accordian-text-dark">Escrow Services are commonly used to provide certainty to all parties involved in a transaction regarding flow of funds.
-                                 When using an Escrow Service, both parties will agree on set conditions that must be met before the Escrow Service provider releases any funds held in the Escrow Account.
-                              </p>
-                           </div>
-                        </div>
+               <div class="accordion-item border-0 my-2">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <p class="fw-bold m-0">
+                           What are the benefits of using Escrow?
+                        </p>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                        <p class="accordian-text-dark">Escrow Services are commonly used to provide certainty to all parties involved in a transaction regarding flow of funds.
+                           When using an Escrow Service, both parties will agree on set conditions that must be met before the Escrow Service provider releases any funds held in the Escrow Account.
+                        </p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </section>
-      <section>
-         <div class="container-fluid bg-gray min-h-100 py-5 d-flex align-items-center">
-            <div class="container">
-               <h1 class="fw-bold text-center text-info my-5">
-                  <b> How does Escrow work – our 5 step guide</b>
-               </h1>
-               <h5 class="text-center text-white my-5">
-                  FTX Express will act as an independent party in an agreement. This means that FTX Express Escrow holds and regulates the funds of the transaction until the conditions set out in the escrow agreement have been met.
-               </h5>
-               <div class="owl-carousel how-we-get">
-                  <div class="item">
-                     <div class="row p-2">
-                        <div class="col-1">
-                           <h1 class="fw-bold text-danger">1</h1>
-                        </div>
-                        <div class="col-11">
-                           <div>
-                              <h4 class="my-3 fw-bold text-green\">A buyer and seller make an agreement -
-                                 <span class="text-info">Agree terms</span>
-                              </h4>
-                              <p class="text-white">
-                                 Party A and Party B agree to terms - FTX Express will draft an escrow agreement tailored to the clients needs. This agreement will contain specific release of funds conditions. 
-                              </p>
-                           </div>
-                        </div>
+      </div>
+   </div>
+</section>
+
+<section>
+   <div class="container-fluid bg-gray min-h-100 py-5 d-flex align-items-center">
+      <div class="container">
+         <h1 class="fw-bold text-center text-info my-5">
+            <b> How does Escrow work – our 5 step guide</b>
+         </h1>
+         <h5 class="text-center text-white my-5">
+            FTX Express will act as an independent party in an agreement. This means that FTX Express Escrow holds and regulates the funds of the transaction until the conditions set out in the escrow agreement have been met.
+         </h5>
+         <div class="owl-carousel how-we-get">
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h1 class="fw-bold text-danger">1</h1>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h4 class="my-3 fw-bold text-green\">A buyer and seller make an agreement -
+                           <span class="text-info">Agree terms</span>
+                        </h4>
+                        <p class="text-white">
+                           Party A and Party B agree to terms - FTX Express will draft an escrow agreement tailored to the clients needs. This agreement will contain specific release of funds conditions. 
+                        </p>
                      </div>
                   </div>
-                  <div class="item">
-                     <div class="row p-2">
-                        <div class="col-1">
-                           <h1 class="fw-bold text-danger">2</h1>
-                        </div>
-                        <div class="col-11">
-                           <div>
-                              <h4 class="my-3 fw-bold text-green\"> The buyer pays FTX Express Escrow -
-                                 <span class="text-info">Payment to escrow</span>
-                              </h4>
-                              <p class="text-white">
-                                 Party A - submits a payment by approved payment method to our Escrow Account, FTX Express verifies the payment and notifies the parties that funds have been deposited. 
-                              </p>
-                           </div>
-                        </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h1 class="fw-bold text-danger">2</h1>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h4 class="my-3 fw-bold text-green\"> The buyer pays FTX Express Escrow -
+                           <span class="text-info">Payment to escrow</span>
+                        </h4>
+                        <p class="text-white">
+                           Party A - submits a payment by approved payment method to our Escrow Account, FTX Express verifies the payment and notifies the parties that funds have been deposited. 
+                        </p>
                      </div>
                   </div>
-                  <div class="item">
-                     <div class="row p-2">
-                        <div class="col-1">
-                           <h1 class="fw-bold text-danger">3</h1>
-                        </div>
-                        <div class="col-11">
-                           <div>
-                              <h4 class="my-3 fw-bold text-green\">The seller sends the goods to the buyer -
-                                 <span class="text-info">Contract performed</span>
-                              </h4>
-                              <p class="text-white">
-                                 Party B provides the goods or services to party A. 
-                              </p>
-                           </div>
-                        </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h1 class="fw-bold text-danger">3</h1>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h4 class="my-3 fw-bold text-green\">The seller sends the goods to the buyer -
+                           <span class="text-info">Contract performed</span>
+                        </h4>
+                        <p class="text-white">
+                           Party B provides the goods or services to party A. 
+                        </p>
                      </div>
                   </div>
-                  <div class="item">
-                     <div class="row p-2">
-                        <div class="col-1">
-                           <h1 class="fw-bold text-danger">4</h1>
-                        </div>
-                        <div class="col-11">
-                           <div>
-                              <h4 class="my-3 fw-bold text-green\">The buyer accepts goods as per agreement -
-                                 <span class="text-info">Contract complete</span>
-                              </h4>
-                              <p class="text-white">
-                                 Party A receives the goods or services and proof of contract and completing is provided.
-                              </p>
-                           </div>
-                        </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h1 class="fw-bold text-danger">4</h1>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h4 class="my-3 fw-bold text-green\">The buyer accepts goods as per agreement -
+                           <span class="text-info">Contract complete</span>
+                        </h4>
+                        <p class="text-white">
+                           Party A receives the goods or services and proof of contract and completing is provided.
+                        </p>
                      </div>
                   </div>
-                  <div class="item">
-                     <div class="row p-2">
-                        <div class="col-1">
-                           <h1 class="fw-bold text-danger">5</h1>
-                        </div>
-                        <div class="col-11">
-                           <div>
-                              <h4 class="my-3 fw-bold text-green\">Escrow releases funds to seller -
-                                 <span class="text-info">Funds released</span>
-                              </h4>
-                              <p class="text-white">
-                                 FTX Express releases funds to Party B from the Escrow Account. 
-                              </p>
-                           </div>
-                        </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h1 class="fw-bold text-danger">5</h1>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h4 class="my-3 fw-bold text-green\">Escrow releases funds to seller -
+                           <span class="text-info">Funds released</span>
+                        </h4>
+                        <p class="text-white">
+                           FTX Express releases funds to Party B from the Escrow Account. 
+                        </p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </section>
-      <footer class="p-5">
-         <div class="d-flex justify-content-center mb-4">
-            <img src="imgs/logo.png" class="logo" alt="">
-         </div>
-         <h6 class="text-center">
-            FTX Express Pty Ltd is a ASIC Australian Proprietary Limited by Shares Registered company operating under The Payment Systems (Regulation) Act 1998
-         </h6>
-      </footer>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="master.js"></script>  
-   </body>
-</html>
+      </div>
+   </div>
+</section>
+
+
+{% endblock mainContent %}
