@@ -1,86 +1,70 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %} FTX | About {% endblock title %}
 
-{% block mainContent %}
+{% block main %}
+<section class="d-flex align-items-center bg-gray" style="margin-top: 120px">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-12">
+            <div class="p-3">
+               <h4 class="mb-4">
+                  We’re a Australian based escrow company helping businesses and
+                  When using an Escrow Service provider, we understand that it’s
+                  important to make sure you trust the Escrow Company you’ve
+                  chosen. At FTX Express we have taken multiple steps to provide
+                  peace of mind for all our customers.
+               </h4>
+               <h4>How are we Regulated?</h4>
+               <p class="mb-3">
+                  FTX Express is reigistered in Australia with ACN 657907894. FTX
+                  Express is authorised by ASIC under The Payment Systems
+                  (Regulation) Act 1998 with registration number 81777620 for the
+                  provision of payment services. Please note that our
+                  authorisation with the Australian Securities & Investment
+                  Commission (ASIC) applies only in relation to payment services
+                  transactions.
+               </p>
+               <h4>Where are my Funds kept?</h4>
+               <p class="mb-3">
+                  FTX Express bank with one of Australias leading banks. We have
+                  declared a trust over our dedicated client escrow bank account.
+                  <br />
+                  The fact we operate a client account means that client funds are
+                  segregated from our own funds, and the trust adds additional
+                  peace of mind. Your money held by FTX Express would be safe even
+                  if FTX Express were to become insolvent, as the insolvency
+                  practitioners could not distribute client money to pay for debts
+                  of the business, as the trust segregates them.
+               </p>
 
-   {% load static %}
-   <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="{% url 'index_view' %}"><img src="{% static 'imgs/logo.png' %}" alt="FTX logo" class="logo"></a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-               <li class="nav-item">
-                  <a class="nav-link {% if active == "index" %} {{"active"}} {% endif %}" aria-current="page" href="{% url 'index_view' %}">Home</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link {% if active == "about" %} {{"active"}} {% endif %}" aria-current="page" href="{% url 'about_view' %}">About Us</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link {% if active == "services" %} {{"active"}} {% endif %}" aria-current="page" href="{% url 'services_view' %}">Services</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link {% if active == "accounts" %} {{"active"}} {% endif %}" aria-current="page" href="{% url 'accounts_view' %}">Accounts</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link {% if active == "contact" %} {{"active"}} {% endif %}" aria-current="page" href="{% url 'contact_view' %}">Contact Us</a>
-               </li>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </nav>
-       <!-- aboutarea -->
-      <section class="min-h-100 d-flex align-items-center">
-         <div class="container">
-            <div class="row">
-               <h1 class="fw-bold text-center text-green mb-4 col-12">
-                  About Us
-               </h1>
-               <div class="col-12 col-md-6 d-flex justify-content-center align-items-center bg-gray d-none d-md-block py-auto" id="faq-contact-us">
-                  <div class="row d-flex justify-content-center">
-                     <div class="col-12">
-                        <img src="{% static 'imgs/logo.png' %}" class="img-fluid">
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6 d-flex justify-content-center px-3">
-                  <div>
-                     <h5 class="fw-bold text-black mb-3">
-                        When using an Escrow Service provider, we understand that it’s important to make sure you trust the Escrow Company you’ve chosen. At FTX Express we have taken multiple steps to provide peace of mind for all our customers.
-                     </h5>
-                     <h3 class="text-green mb-2 fw-bold">
-                        How are we Regulated?
-                     </h3>
-                     <p class="mb-3">
-                        FTX Express is reigistered in Australia with ACN 657907894. FTX Express is authorised by ASIC under The Payment Systems (Regulation) Act 1998 with registration number 81777620 for the provision of payment services.
-                        Please note that our authorisation with the Australian Securities & Investment Commission (ASIC) applies only in relation to payment services transactions.
-                     </p>
-                     <h3 class="text-green mb-2 fw-bold">
-                        Where are my Funds kept?
-                     </h3>
-                     <p class="mb-3">
-                        FTX Express bank with one of Australias leading banks. We have declared a trust over our dedicated client escrow bank account. <br />
-                        The fact we operate a client account means that client funds are segregated from our own funds, and the trust adds additional peace of mind. Your money held by FTX Express would be safe even if FTX Express were to become insolvent, as the insolvency practitioners could not distribute client money to pay for debts of the business, as the trust segregates them. 
-                     </p>
-                     <h3 class="text-green mb-2 fw-bold">
-                        What identity checks do we carry out?
-                     </h3>
-                     <p class="mb-3">
-                        When setting up an escrow account we carry out ‘Know your Client’ (KYC) checks / Anti-Money Laundering (AML) checks on all parties involved in the escrow transaction. This is a requirement of our regulator. <br />
-                        We will require Photographic Identification and proof of address, and may also ask for information regarding the source of funds being used for the transaction and source of wealth, from each of the involved individuals. Identity will also be verified whether in person, over the phone or via photos. It may be that one or more of the parties are Companies, in which case we will ask for KYC documents from one or more of the directors and shareholders.
-                     </p>
-                     <h2 class="text-green mb-2 fw-bold">
-                        If you would like more information on our KYC / AML process please don’t hesitate to <span><a href="{% url 'contact_view' %}">contact us</a></span>.
-                     </h2>
-                  </div>
-               </div>
+               <h4>What identity checks do we carry out?</h4>
+               <p class="mb-3">
+                  FTX Express bank with one of Australias leading banks. We have
+                  declared a trust over our dedicated client escrow bank account.
+                  <br />
+                  The fact we operate a client account means that client funds are
+                  segregated from our own funds, and the trust adds additional
+                  peace of mind. Your money held by FTX Express would be safe even
+                  if FTX Express were to become insolvent, as the insolvency
+                  practitioners could not distribute client money to pay for debts
+                  of the business, as the trust segregates them.
+               </p>
             </div>
          </div>
-      </section>
+      </div>
+   </div>
+</section>
 
-
-{% endblock mainContent %}
+<section>
+   <div class="container-fluid d-flex align-items-center">
+      <div class="container">
+         <h2 class="text-center my-5">
+            If you would like more information on our KYC / AML process please
+            don’t hesitate to contact us.
+         </h2>
+      </div>
+   </div>
+</section>
+{% endblock main %}

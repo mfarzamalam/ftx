@@ -2,9 +2,9 @@ from django.urls import path, include
 from .views import *
 
 urlpatterns = [
-    path('', index_view, name='index_view'),
-    path('about/', about_view, name='about_view'),
-    path('services/', services_view, name='services_view'),
-    path('accounts/', accounts_view, name='accounts_view'),
-    path('contact/', contact_view, name='contact_view'),
+    path('', index_view, name='index'),
+    path('about/', about_view, name='about'),
+    path('services/', services_view, name='services'),
+    path('accounts/', accounts_view, name='accounts'),
+    path('contact/', contact_view, name='contact'),
 ]
