@@ -1,52 +1,180 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block mainContent %}
+{% block title %} FTX | Home {% endblock title %}
 
-<section class="min-h-100 d-flex align-items-center bg-gray" style="margin-top: 77px;">
+{% block main %}
+<section class="d-flex align-items-center bg-gray" style="margin-top: 120px">
    <div class="container-fluid">
       <div class="row">
-         <div class="col-12 col-md-6">
+         <div class="col-12">
             <div class="p-3">
-               <h3 class="text-green mb-3">
-                  We’re a 
-                  <span class="text-white fw-bold">
-                     <h2>Australian based escrow company</h2>
-                  </span>
-                  helping businesses and individuals exchange assets and funds.
-               </h3>
-               <h4 class="text-white fw-bold">
-                  What is Escrow?
+               <h4 class="mb-4">
+                  We’re a Australian based escrow company helping businesses and
+                  individuals exchange assets and funds.
                </h4>
-               <p class="text-green fw-bold mb-3">
-                  Escrow is the term used when a contractual arrangement between two or more parties is put in place, in which an Escrow <span class="text-white">Company will hold funds or property during a transaction,</span> acting as an independent third party.
+               <h4>What is Escrow?</h4>
+               <p class="mb-3">
+                  Escrow is the term used when a contractual arrangement between
+                  two or more parties is put in place, in which an Escrow
+                  <span class="text-dark">
+                     Company will hold funds or property during a transaction,
+                  </span>
+                  acting as an independent third party.
                </p>
-               <p class="text-white fw-bold mb-3">
-                  When providing Escrow Services the <span class="text-green">Escrow Company acts as</span> a third party to the transaction by holding the funds or property <span class="text-green">until pre-agreed conditions have been met.</span> Once the conditions are met the Escrow Service provider will release the funds/ property held..
+               <p class="mb-3">
+                  When providing Escrow Services the Escrow Company acts as a
+                  third party to the transaction by holding the funds or property
+                  until pre-agreed conditions have been met. Once the conditions
+                  are met the Escrow Service provider will release the funds/
+                  property held..
                </p>
-               <h4 class="text-green fw-bold">
-                  Escrow Services can be <span class="text-white">used</span> in almost any situation where <span class="text-white">money or property is being transferred</span> between parties.
+               <h4>
+                  Escrow Services can be used in almost any situation where money
+                  or property is being transferred between parties.
                </h4>
             </div>
-         </div>
-         <div class="col-12 col-md-6 py-3">
-            <img src="{% static 'imgs/header-img.jpg' %}" class="img-fluid " style=" object-fit: cover;
-               border-radius: 20px;
-               height: 100%;
-               width: auto;
-               background-size: cover;" alt="">
          </div>
       </div>
    </div>
 </section>
 
-<section id="question-area" class="py-5 bg-green min-h-70 d-flex align-items-center">
+<section id="question-area" class="d-flex align-items-center mt-5">
    <div class="container">
       <div class="row d-flex justify-content-center">
-         <h1 class="fw-bold text-center mt-5 mt-md-0 mb-5">
-            Questions?
-         </h1>
+         <h2 class="text-center mt-5 mt-md-0 mb-5">
+            How does escrow work? Our 5 step guide.
+         </h2>
          <div class="col-12 col-md-9">
+            <div class="accordion accordion-flush " id="accordionFlushExample">
+               <div class="accordion-item border-0  my-2">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                     <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <p class="fw-bold m-0">
+                           A buyer and seller make an agreement - Agree terms.
+                        </p>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                     data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                        <p class="accordian-text-dark">
+                           Party A and Party B agree to terms - FTX Express will
+                           draft an escrow agreement tailored to the clients needs.
+                           This agreement will contain specific release of funds
+                           conditions.
+                           <p class="fw-bold">
+                              “FTX Express will act as an independent party in an agreement. This means that FTX Express
+                              Escrow holds and regulates the funds of the transaction until the conditions set out in
+                              the escrow agreement have been met.”
+                           </p>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item border-0 my-2">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <p class="fw-bold m-0">
+                           The buyer pays FTX Express Escrow - Payment to escrow.
+                        </p>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                     data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                        <p class="accordian-text-dark">
+                           Party A - submits a payment by approved payment method to our Escrow Account, FTX Express
+                           verifies the payment and notifies the parties that funds have been deposited.
+                        </p>
+                        <p class="fw-bold">
+                           “FTX Express will act as an independent party in an agreement. This means that FTX Express
+                           Escrow holds and regulates the funds of the transaction until the conditions set out in the
+                           escrow agreement have been met.”
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item border-0 my-2">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <p class="fw-bold m-0">
+                           The seller sends the goods to the buyer - Contract performed.
+                        </p>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                     data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                        <p class="accordian-text-dark">
+                           Party B provides the goods or services to party A.
+                        </p>
+                        <p class="fw-bold">
+                           “FTX Express will act as an independent party in an agreement. This means that FTX Express
+                           Escrow holds and regulates the funds of the transaction until the conditions set out in the
+                           escrow agreement have been met.”
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item border-0 my-2">
+                  <h2 class="accordion-header" id="flush-headingFour">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <p class="fw-bold m-0">
+                           The buyer accepts goods as per agreement - Contract complete.
+                        </p>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                     data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                        <p class="accordian-text-dark">
+                           Party A receives the goods or services and proof of
+                           contract and completing is provided.
+                        </p>
+                        <p class="fw-bold">
+                           “FTX Express will act as an independent party in an agreement. This means that FTX Express
+                           Escrow holds and regulates the funds of the transaction until the conditions set out in the
+                           escrow agreement have been met.”
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item border-0 my-2">
+                  <h2 class="accordion-header" id="flush-headingFive">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <p class="fw-bold m-0">
+                           Escrow releases funds to seller - Funds released.
+                        </p>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                     data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                        <p class="accordian-text-dark">
+                           FTX Express releases funds to Party B from the Escrow
+                           Account.
+                        </p>
+                        <p class="fw-bold">
+                           “FTX Express will act as an independent party in an agreement. This means that FTX Express
+                           Escrow holds and regulates the funds of the transaction until the conditions set out in the
+                           escrow agreement have been met.”
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="col-12 col-md-9">
             <div class="accordion accordion-flush " id="accordionFlushExample">
                <div class="accordion-item border-0  my-2">
                   <h2 class="accordion-header" id="flush-headingOne">
@@ -85,6 +213,9 @@
                               Please see our <a href="services.html" class="text-green fw-bold">services page</a>, for the types of service and sectors we work with.
                            </li>
                         </ul>
+                        <h5 class="fw-bold text-dark">
+                           “FTX Express will act as an independent party in an agreement. This means that FTX Express Escrow holds and regulates the funds of the transaction until the conditions set out in the escrow agreement have been met.”
+                        </h5>
                         </p>
                      </div>
                   </div>
@@ -102,36 +233,37 @@
                         <p class="accordian-text-dark">Escrow Services are commonly used to provide certainty to all parties involved in a transaction regarding flow of funds.
                            When using an Escrow Service, both parties will agree on set conditions that must be met before the Escrow Service provider releases any funds held in the Escrow Account.
                         </p>
+                          <h5 class="fw-bold text-dark">
+                           “FTX Express will act as an independent party in an agreement. This means that FTX Express Escrow holds and regulates the funds of the transaction until the conditions set out in the escrow agreement have been met.”
+                        </h5>
                      </div>
                   </div>
                </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-
-<section>
-   <div class="container-fluid bg-gray min-h-100 py-5 d-flex align-items-center">
-      <div class="container">
-         <h1 class="fw-bold text-center text-info my-5">
-            <b> How does Escrow work – our 5 step guide</b>
-         </h1>
-         <h5 class="text-center text-white my-5">
+               <div class="accordion-item border-0 my-2">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <p class="fw-bold m-0">
+                           What are the benefits of using Escrow?
+                        </p>
+                     </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                           <h5 class="text-center text-dark my-5">
             FTX Express will act as an independent party in an agreement. This means that FTX Express Escrow holds and regulates the funds of the transaction until the conditions set out in the escrow agreement have been met.
          </h5>
          <div class="owl-carousel how-we-get">
             <div class="item">
                <div class="row p-2">
                   <div class="col-1">
-                     <h1 class="fw-bold text-danger">1</h1>
+                     <h1 class="fw-bold text-dark">1</h1>
                   </div>
                   <div class="col-11">
                      <div>
                         <h4 class="my-3 fw-bold text-green\">A buyer and seller make an agreement -
                            <span class="text-info">Agree terms</span>
                         </h4>
-                        <p class="text-white">
+                        <p class="text-dark">
                            Party A and Party B agree to terms - FTX Express will draft an escrow agreement tailored to the clients needs. This agreement will contain specific release of funds conditions. 
                         </p>
                      </div>
@@ -141,14 +273,14 @@
             <div class="item">
                <div class="row p-2">
                   <div class="col-1">
-                     <h1 class="fw-bold text-danger">2</h1>
+                     <h1 class="fw-bold text-dark">2</h1>
                   </div>
                   <div class="col-11">
                      <div>
                         <h4 class="my-3 fw-bold text-green\"> The buyer pays FTX Express Escrow -
                            <span class="text-info">Payment to escrow</span>
                         </h4>
-                        <p class="text-white">
+                        <p class="text-dark">
                            Party A - submits a payment by approved payment method to our Escrow Account, FTX Express verifies the payment and notifies the parties that funds have been deposited. 
                         </p>
                      </div>
@@ -158,14 +290,14 @@
             <div class="item">
                <div class="row p-2">
                   <div class="col-1">
-                     <h1 class="fw-bold text-danger">3</h1>
+                     <h1 class="fw-bold text-dark">3</h1>
                   </div>
                   <div class="col-11">
                      <div>
                         <h4 class="my-3 fw-bold text-green\">The seller sends the goods to the buyer -
                            <span class="text-info">Contract performed</span>
                         </h4>
-                        <p class="text-white">
+                        <p class="text-dark">
                            Party B provides the goods or services to party A. 
                         </p>
                      </div>
@@ -175,14 +307,14 @@
             <div class="item">
                <div class="row p-2">
                   <div class="col-1">
-                     <h1 class="fw-bold text-danger">4</h1>
+                     <h1 class="fw-bold text-dark">4</h1>
                   </div>
                   <div class="col-11">
                      <div>
                         <h4 class="my-3 fw-bold text-green\">The buyer accepts goods as per agreement -
                            <span class="text-info">Contract complete</span>
                         </h4>
-                        <p class="text-white">
+                        <p class="text-dark">
                            Party A receives the goods or services and proof of contract and completing is provided.
                         </p>
                      </div>
@@ -192,15 +324,137 @@
             <div class="item">
                <div class="row p-2">
                   <div class="col-1">
-                     <h1 class="fw-bold text-danger">5</h1>
+                     <h1 class="fw-bold text-dark">5</h1>
                   </div>
                   <div class="col-11">
                      <div>
                         <h4 class="my-3 fw-bold text-green\">Escrow releases funds to seller -
                            <span class="text-info">Funds released</span>
                         </h4>
-                        <p class="text-white">
+                        <p class="text-dark">
                            FTX Express releases funds to Party B from the Escrow Account. 
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+           <h5 class="fw-bold text-dark">
+                           “FTX Express will act as an independent party in an agreement. This means that FTX Express Escrow holds and regulates the funds of the transaction until the conditions set out in the escrow agreement have been met.”
+                        </h5>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+      </div>
+   </div>
+</section>
+<section>
+   <div class="container-fluid bg-gray min-h-100 py-5 d-flex align-items-center">
+      <div class="container">
+         <h2 class="text-center my-5">
+            How does Escrow work – Our 5 step guide.
+         </h2>
+         <p class="text-center my-5">
+            FTX Express will act as an independent party in an agreement. This
+            means that FTX Express Escrow holds and regulates the funds of the
+            transaction until the conditions set out in the escrow agreement
+            have been met.
+         </p>
+         <div class="owl-carousel how-we-get">
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h3 class="fw-bold text-dark">1</h3>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h5 class="my-3 fw-bold">
+                           A buyer and seller make an agreement -
+                           Agree terms.
+                        </h5>
+                        <p class="text-dark">
+                           Party A and Party B agree to terms - FTX Express will
+                           draft an escrow agreement tailored to the clients needs.
+                           This agreement will contain specific release of funds
+                           conditions.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h3 class="fw-bold text-dark">2</h3>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h5 class="my-3 fw-bold">
+                           The buyer pays FTX Express Escrow -
+                           Payment to escrow.
+                        </h5>
+                        <p class="text-dark">
+                           Party A - submits a payment by approved payment method to
+                           our Escrow Account, FTX Express verifies the payment and
+                           notifies the parties that funds have been deposited.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h3 class="fw-bold text-dark">3</h3>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h5 class="my-3 fw-bold">
+                           The seller sends the goods to the buyer -
+                           Contract performed.
+                        </h5>
+                        <p class="text-dark">
+                           Party B provides the goods or services to party A.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h3 class="fw-bold text-dark">4</h3>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h5 class="my-3 fw-bold">
+                           The buyer accepts goods as per agreement -
+                           Contract complete.
+                        </h5>
+                        <p class="text-dark">
+                           Party A receives the goods or services and proof of
+                           contract and completing is provided.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="row p-2">
+                  <div class="col-1">
+                     <h3 class="fw-bold text-dark">5</h3>
+                  </div>
+                  <div class="col-11">
+                     <div>
+                        <h5 class="my-3 fw-bold">
+                           Escrow releases funds to seller -
+                           Funds released.
+                        </h5>
+                        <p class="text-dark">
+                           FTX Express releases funds to Party B from the Escrow
+                           Account.
                         </p>
                      </div>
                   </div>
@@ -210,6 +464,4 @@
       </div>
    </div>
 </section>
-
-
-{% endblock mainContent %}
+{% endblock main %}
