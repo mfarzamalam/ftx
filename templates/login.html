@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} FTX | Login {% endblock title %}
+
+{% block main %}
+<div id="login" class="container-fluid" style="margin-top: 120px;margin-bottom: 40px">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-6 col-lg-4">
+            <form class="my-1 p-4 r-form" action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <h4 class="text-bolder border-bottom pb-3">
+                    <b>Login</b>
+                </h4>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <div class="text-center">
+                        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'imgs/logo.png' %}"
+                                alt="FTX logo" class="logo mb-3"></a>
+                    </div>
+                </a>
+                {% if form.non_field_errors %}
+                <div class="non-field-errors">
+                    {% for err in form.non_field_errors %}
+                    <p class="text-danger">{{ err }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="p-1 col-12 fw-bold mb-2">
+                    <label class="text-r mb-1">Username</label>
+                    {{form.username}}
+                    <span class="text-danger">{{ form.username.errors|striptags }}</span>
+                </div>
+                <div class="p-1 col-12 mb-2">
+                    <label class="text-r fw-bold mb-1">Password</label>
+                    <div class="r-input form-control col-12 d-flex justify-content-between">
+                        {{form.password}}
+                        <span class="text-danger">{{ form.password.errors|striptags }}</span>
+                        <span toggle="#id_password" title="Click me to see Password"
+                            class="col-1 my-auto fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                    </div>
+                </div>
+                <div class="p-1 col-12 mb-2">
+                    <a href=""><button class="btn-theme col-12"><b>Login</b></button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock main %}
+
+{% block js %}
+<script>
+    $(".toggle-password").click(function () {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+    });
+</script>
+
+{% endblock js %}

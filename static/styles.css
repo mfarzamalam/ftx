@@ -172,3 +172,49 @@ a:hover {
 footer {
   word-spacing: 10px;
 }
+
+.r-pass {
+  outline: none;
+  border: none;
+}
+.r-form {
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 4px 28px 0px rgba(89, 178, 0, 1);
+  -moz-box-shadow: 0px 4px 28px 0px rgba(89, 178, 0, 1);
+  box-shadow: 0px 4px 28px 0px rgba(89, 178, 0, 1);
+}
+.r-input {
+  outline: none;
+  border: 2px solid #59b200;
+  border-radius: 15px;
+}
+.form-control:focus {
+  background-color: #fff;
+  border-color: #59b200;
+  box-shadow: none;
+}
+.btn-theme {
+  border: none;
+  outline: none;
+  background: #59b200;
+  height: 40px;
+  width: 120px;
+  color: #ffffff;
+  border-radius: 15px;
+  transition: 0.5s;
+  font-weight: bolder;
+}
+.btn-theme:hover {
+  transition: 0.5s;
+  background: #88cd43;
+}
+#login .btn-theme {
+  width: 100% !important;
+}
+.r-bor-bg {
+  border-top: 4px solid gray;
+  background: #faf8f8;
+}
+.r-cards-escrow {
+  border: 35px solid #59b200;
+}
