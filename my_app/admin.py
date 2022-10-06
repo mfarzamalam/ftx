@@ -4,8 +4,8 @@ from django.contrib.auth.admin import UserAdmin as DjanoAdmin
 from .models import *
 
 # Register your models here.
-# class ProfileInline(admin.StackedInline):
-#     model = Profile
+class ProfileInline(admin.StackedInline):
+    model = Profile
 
 
 class UserAdmin(DjanoAdmin):
@@ -33,7 +33,7 @@ class UserAdmin(DjanoAdmin):
     )
     ordering = ("username",)
     search_fields = ("username",)
-    # inlines = (ProfileInline,)
+    inlines = (ProfileInline,)
 
 
 admin.site.unregister(User)
