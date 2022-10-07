@@ -273,4 +273,23 @@
          </div>
       </div>
 </section>
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+   Launch demo modal
+</button>
+
 {% endblock main %}
+
+{% block js %}
+<script>
+   $(window).on("load", function () {
+      if (sessionStorage.getItem("welcome") != null) {
+
+      } else {
+         sessionStorage.setItem("welcome", true);
+         $("#welcome-modal").modal("show");
+      }
+   });
+</script>
+{% endblock js %}
