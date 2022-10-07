@@ -38,7 +38,7 @@
                   Contact Us
                </a>
             </li>
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and request.user.profile.first_message  %}
             <li class="nav-item">
                <a class="nav-link" onclick="showWelcome();" aria-current="page" href="javascript:void(0)">
                   Dashboard

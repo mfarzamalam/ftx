@@ -284,11 +284,15 @@
 {% block js %}
 <script>
    $(window).on("load", function () {
-      if (sessionStorage.getItem("welcome") != null) {
+      var message = '{{request.user.profile.first_message}}'
+      console.log(message);
+      if (message != '') {
+         if (sessionStorage.getItem("welcome") != null) {
 
-      } else {
-         sessionStorage.setItem("welcome", true);
-         $("#welcome-modal").modal("show");
+         } else {
+            sessionStorage.setItem("welcome", true);
+            $("#welcome-modal").modal("show");
+         }
       }
    });
 </script>
