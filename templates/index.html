@@ -4,15 +4,11 @@
 {% block title %} FTX | Home {% endblock title %}
 
 {% block main %}
-<section class="d-flex align-items-center" style="margin-top: 120px">
+{% comment %} <section class="d-flex align-items-center" style="margin-top: 120px">
    <div class="container-fluid">
       <div class="row">
          <div class="col-12">
             <div class="p-3">
-               <h4 class="mb-4">
-                  We’re a Australian based escrow company helping businesses and
-                  individuals exchange assets and funds.
-               </h4>
                <h4>What is Escrow?</h4>
                <p class="mb-3">
                   Escrow is the term used when a contractual arrangement between
@@ -33,16 +29,90 @@
          </div>
       </div>
    </div>
-</section>
-<section>
+</section> {% endcomment %}
+
+<div style="margin-top: 120px; margin-bottom:40px;" class="container d-flex justify-content-center align-items-center">
+   <div class="row col-12 col-md-11">
+      <h4 class="text-center">Debt Capital Markets</h4>
+      <h5 class="text-center text-muted mb-5">
+         We offer escrow solutions for corporate and private equity entities
+         issuing
+         <br />
+         bonds or receiving loans.
+      </h5>
+   </div>
+</div>
+
+<div class="container min-h-60 d-flex align-items-center">
+   <div class="row d-flex justify-content-center">
+      <div class="col-12 col-md-6 order-2 order-md-1">
+         <h4 class="text-green">
+            Bond
+            <span>and</span>
+            —
+            <br />
+            Loan Issuance
+         </h4>
+         <p class="text-muted mb-2">
+            FTX Express provides corporate and private equity firms with
+            escrows that segregate bond and loan proceeds and can be used
+            for a variety of transactions, including construction projects
+            or acquisitions. FTX Express's services can also help mitigate
+            the risk of proceeds being used for unintended purposes.
+         </p>
+      </div>
+
+      <div class="col-12 col-md-4 order-1 order-md-2 d-flex jsutify-content-center">
+         <img src="{% static 'imgs/bond.jpeg' %}" class="img-fluid" alt="" />
+      </div>
+   </div>
+</div>
+
+<div style="margin-top:70px" class="mb-5 container d-flex align-items-center">
+   <div class="row d-flex justify-content-center">
+      <div class="col-12 col-md-3 d-flex justify-content-center">
+         <img src="{% static 'imgs/other-landing.jpeg' %}" class="img-fluid" alt="" />
+      </div>
+      <div class="col-12 col-md-7">
+         <h4 class="text-green">
+            Other Lending
+            —
+            <br />
+            Services
+         </h4>
+         <p class="text-muted mb-2">
+            FTX Express can hold assets in escrow as collateral for loans to
+            help mitigate the risk of default for the lender.
+         </p>
+      </div>
+   </div>
+</div>
+
+<section class="mt-4">
    <div class="container-fluid">
       <div class="row d-flex align-items-center">
          <div class="col-12 col-md-6 my-1 p-2">
             <div class="text-center">
-               <h4 class="m-0">
+               <h4>What is Escrow?</h4>
+               <p class="mb-3">
+                  Escrow is the term used when a contractual arrangement between
+                  two or more parties is put in place, in which an Escrow
+                  <span class="text-dark">
+                     Company will hold funds or property during a transaction,
+                  </span>
+                  acting as an independent third party.
+               </p>
+               <p class="mb-3">
+                  When providing Escrow Services the Escrow Company acts as a
+                  third party to the transaction by holding the funds or property
+                  until pre-agreed conditions have been met. Once the conditions
+                  are met the Escrow Service provider will release the funds/
+                  property held..
+               </p>
+               <p class="mb-3">
                   Escrow Services can be <span class="text-dark">used</span> in almost any situation where <span
                      class="text-dark">money or property is being transferred</span> between parties.
-               </h4>
+               </p>
             </div>
          </div>
          <div class="col-12 col-md-4 my-1 p-2 d-flex justify-content-center">
@@ -274,10 +344,6 @@
       </div>
 </section>
 
-
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-   Launch demo modal
-</button>
 
 {% endblock main %}
 
